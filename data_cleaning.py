@@ -8,7 +8,8 @@ import pandas as pd
 
 # Load the datasets (multisheets) and dataframe each sheet one by one
 xls = pd.ExcelFile(r'path.xlsx')
-df1 = pd.read_excel(xls, 'sheet1_name')
+# na_filter = false replaces empty cell to '', otherwise it'll become nan. 
+df1 = pd.read_excel(xls, 'sheet1_name', na_filter = false)
 
 # exam the dataframe 
 # print(df1.head())
